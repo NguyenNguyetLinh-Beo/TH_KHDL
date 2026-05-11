@@ -1,6 +1,6 @@
 # TH_KHDL
-DỰ ÁN THỰC HÀNH
-SO SÁNH HIỆU NĂNG VÀ KIẾN TRÚC PANDAS VS PYSPARK TRÊN CỤM PHÂN TÁN
+# DỰ ÁN THỰC HÀNH
+# SO SÁNH HIỆU NĂNG VÀ KIẾN TRÚC PANDAS VS PYSPARK TRÊN CỤM PHÂN TÁN
 1. ĐẶT VẤN ĐỀ VÀ MỤC TIÊU DỰ ÁN
 1.1. Bối cảnh
 
@@ -86,16 +86,54 @@ Nguồn tải:
 Quy mô dữ liệu thử nghiệm
 
 - PySpark	1 tháng dữ liệu thử nghiệm chạy trên Local Mode
-  
-Chạy PySpark ở local mode trên Windows
 
 Yêu cầu cấu hình: Do máy yếu nên không dùng máy ảo mà chạy thẳng 
 
-- Windows local mode
+- Chạy PySpark ở local mode trên Windows
 - Python
 - Java
 - PySpark
 - Pandas
-Công cụ	Quy mô dữ liệu
-Pandas	1 tháng dữ liệu (~3-4 triệu dòng)
-PySpark	1-2 năm dữ liệu (~40-80 triệu dòng)
+##GIAI ĐOẠN 1 — CHUẨN BỊ MÔI TRƯỜNG
+## Bước 1 — Kiểm tra Python
+<img width="765" height="139" alt="image" src="https://github.com/user-attachments/assets/6fe9d779-c605-40ac-8b93-4963f04b1820" />
+
+###  Bước 2 — Cài Java 11
+<img width="1319" height="917" alt="image" src="https://github.com/user-attachments/assets/7108eaad-5b36-4d75-a511-1f8920216fda" />
+
+###  Bước 3 — Tạo thư mục dự án
+
+C:\Users\nguye\BigData_Project\data
+<img width="808" height="360" alt="image" src="https://github.com/user-attachments/assets/3041d51a-2a25-4e71-8d49-7e416b203f64" />
+
+Trong đó tạo:
+
+BigData_Project/  
+│  
+├── data/   
+├── pandas_taxi.py  
+├── pyspark_taxi.py  
+├── screenshots/  
+└── report/  
+### Bước 4 — Cài thư viện Python
+- pip install pandas pyspark pyarrow matplotlib
+  <img width="1453" height="845" alt="image" src="https://github.com/user-attachments/assets/296b54f8-ad3e-4e75-8fe0-8f3f5ffeb470" />
+
+## GIAI ĐOẠN 2 — TẢI DỮ LIỆU TAXI
+Bước 5 — Tải dữ liệu
+- NYC TLC Trip Record Data: yellow_tripdata_2024-01.parquet
+GIAI ĐOẠN 3 — CODE PANDAS
+Bước 6 — Tạo file pandas_taxi.py sau đó chạy
+<img width="1476" height="880" alt="image" src="https://github.com/user-attachments/assets/c0242e51-9236-4b71-962b-a3d73919de81" />
+
+<img width="931" height="775" alt="image" src="https://github.com/user-attachments/assets/f91d82b4-fcbc-499d-9d22-760c7c52f475" />
+
+## GIAI ĐOẠN 4 — CODE PYSPARK
+### Bước 7 — Tạo file pyspark_taxi.py sau đó chạy
+<img width="1473" height="499" alt="image" src="https://github.com/user-attachments/assets/5a6ba028-d61d-41ca-9a26-309fa923c651" />
+
+### Bước 8 — Nhận xét
+- Pandas: Khởi động nhanh, Dễ dùng, RAM tăng mạnh, Phù hợp dữ liệu nhỏ
+- PySpark: Khởi động chậm hơn, Xử lý song song, Ổn định với dữ liệu lớn, Có Lazy Evaluation
+### Bước 9: Giải thích Lazy Evaluation theo ý hiểu của em:
+- Trong PySpark: Các Transformation chưa chạy ngay, Spark tạo DAG, chỉ thực thi khi gọi Action như: .show()
