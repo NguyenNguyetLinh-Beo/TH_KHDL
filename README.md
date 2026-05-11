@@ -1,4 +1,9 @@
 # TH_KHDL
+# Sinh Viên
+# Họ tên: Nguyễn Nguyệt Linh
+# MSV: K225480106039
+# Lớp: 58KTPM
+# Môn: Khoa Học Dữ Liệu
 # DỰ ÁN THỰC HÀNH
 # SO SÁNH HIỆU NĂNG VÀ KIẾN TRÚC PANDAS VS PYSPARK TRÊN CỤM PHÂN TÁN
 1. ĐẶT VẤN ĐỀ VÀ MỤC TIÊU DỰ ÁN
