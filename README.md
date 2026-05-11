@@ -133,6 +133,8 @@ Bước 6 — Tạo file pandas_taxi.py sau đó chạy
 
 <img width="931" height="775" alt="image" src="https://github.com/user-attachments/assets/f91d82b4-fcbc-499d-9d22-760c7c52f475" />
 
+<img width="1783" height="859" alt="image" src="https://github.com/user-attachments/assets/c192e07b-9214-40f2-8ce5-882d066d1255" />
+
 ## GIAI ĐOẠN 4 — CODE PYSPARK
 ### Bước 7 — Tạo file pyspark_taxi.py sau đó chạy
 <img width="1473" height="499" alt="image" src="https://github.com/user-attachments/assets/5a6ba028-d61d-41ca-9a26-309fa923c651" />
